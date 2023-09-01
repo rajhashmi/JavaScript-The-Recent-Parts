@@ -38,12 +38,52 @@
     function data(){
         return {a:1,b:2,c:3};
     }
-    let first,second
     // now there is a catach when we use curly parentensis the parsing wil think it's block
 
-    ({
-        a: first,
-        c: second
-    })
-    console.log(second);
+    let{
+        a,
+        c // if there is source and target same name then we can do this method
+    }= data()
+    console.log(c);
+}
+
+// Nested Object
+
+{
+    function data(){
+        return {
+            a:1,
+            b:{
+                c:2,
+                d:4
+            }
+        }
+    }
+    let tmp = data() ||{};
+    let a = tmp.a;
+    let b = tmp.b;
+    let c = b.c;
+    let d = b.d;
+}
+
+//  let's try with destructuring 
+
+{
+    function data(){
+        return {
+            a:1,
+            b:{
+                c:2,
+                d:4
+            }
+        }
+    }
+    let {
+        a:first,
+        b:{
+            c: second,
+            d:third
+        } = {}
+    } = data()||{}
+    console.log(third);
 }
