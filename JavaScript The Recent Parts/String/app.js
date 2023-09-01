@@ -50,3 +50,20 @@ function upper(string,...value){
 console.log(intro);
 
 
+
+// ===================================  String padding & String trimming
+
+// 1. padding
+
+var str = "hello"
+
+str.padStart(5); // 'Hello' 
+//  we are not saying how much padding we need we are saying give me 5 padding with LENGTH
+
+str.padStart(8); // '   Hello'
+
+str.padStart(8,"*"); // '***Hello';
+
+str.padStart(8,'12345'); // '123Hello'
+
+str.padStart(8,'ad'); // 'abaHello';
