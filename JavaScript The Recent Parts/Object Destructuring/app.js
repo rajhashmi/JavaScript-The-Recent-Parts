@@ -81,9 +81,32 @@
     let {
         a:first,
         b:{
-            c: second,
+            c: second = 20,
             d:third
         } = {}
     } = data()||{}
-    console.log(third);
+    console.log(second);
+}
+
+// parameter Objects
+
+{
+    function data(tmp = {}){
+        let{
+            a,
+            b
+        } = tmp;
+
+        //...
+
+    }
+}
+
+{
+    function data({
+        a,
+        b
+    }= {}){
+        // ...
+    }
 }
