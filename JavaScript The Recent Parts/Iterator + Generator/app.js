@@ -46,3 +46,34 @@ console.log(iterators.next());
 console.log(iterators.next());
 
 
+// ===================================================== function Generator ===========
+
+function* GeneratorFunction(){
+  yield 1;
+  yield 2;
+}
+let Generator = GeneratorFunction()
+console.log(Generator.next());
+console.log(Generator.next().value);
+console.log(Generator.next());
+console.log(Generator.next());
+
+
+let numbers = {
+  *[Symbol.iterator]({
+    start = 0,
+    end = 100,
+    step = 1
+  }={}){
+    for(let i = start; i<=end; i+=step){
+      yield i;
+    }
+  }
+}
+console.log(`the lucky number are: ${
+  [...numbers[Symbol.iterator]({
+    start: 6,
+    end:30,
+    step:4
+  })]
+}`)
