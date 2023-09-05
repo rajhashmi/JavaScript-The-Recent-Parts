@@ -28,3 +28,36 @@ weather().then((result) => {
 console.log(weather().then((result) => {
     console.log(result);
 }));
+
+
+// async function age() {
+//     return 19;
+//   }
+
+// async function main(){
+//     let agee = await age();
+//     console.log(agee);
+// }
+// console.log(main());
+  
+
+function fetchData() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // Simulate fetching data from a server
+        const data = { name: 'John', age: 30 };
+        resolve(data); // Resolve the promise with the data
+      }, 1000);
+    });
+  }
+  
+  fetchData()
+    .then((result) => {
+      // This callback is executed when the Promise is resolved
+      console.log('Data:', result);
+    })
+    .catch((error) => {
+      // This callback is executed if there's an error
+      console.error('Error:', error);
+    });
+  
