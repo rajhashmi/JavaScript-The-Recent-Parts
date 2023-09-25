@@ -61,3 +61,20 @@ function fetchData() {
       console.error('Error:', error);
     });
   
+
+    
+let newPromise = getData();
+let result
+console.log(newPromise);
+function getData(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+           resolve(result = 'hello')
+        },2000)
+    })
+   
+}
+
+newPromise.then((value)=>{
+    console.log(value);
+})

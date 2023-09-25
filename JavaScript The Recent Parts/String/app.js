@@ -42,7 +42,7 @@ function upper(string,...value){
   for(let i =0; i<string.length;i++){
     if(i>0){
       ret += String(value[i-1]).toUpperCase();
-    }
+    } 
     ret += string[i]
   }
   return ret
