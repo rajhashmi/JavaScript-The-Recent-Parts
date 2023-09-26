@@ -11,10 +11,9 @@ var rest1 = tmp.slice(3); // we are taking the rest of them
 // let's try with destructring
 
 var [
-    first1,
-    second2,
-    third3,
-    ...rest2 // we are taking the rest of them
+    first,
+    second,
+    thing
 ] = data();
 
 console.log(rest1);
@@ -25,7 +24,7 @@ console.log(rest1);
     let first,second,third,fourth;
 first = tmp[0];
 second = tmp[1];
-third = tmp[3];
+third = tmp[3]; 
 fourth = tmp.slice(3);
 }
 
@@ -208,4 +207,17 @@ let y = 20;
         ] = [],
         fourth
     ] = tmp = data() || []
+}
+
+{
+    function data(){
+        return [1,[2,3],4];
+
+    }
+    let tmp;
+    let [
+        first,
+        second,
+        thing
+    ] = tmp = data()
 }
