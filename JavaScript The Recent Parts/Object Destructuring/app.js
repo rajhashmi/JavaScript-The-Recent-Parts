@@ -86,6 +86,7 @@
         } = {}
     } = data()||{}
     console.log(second);
+    console.log(second);
 }
 
 // parameter Objects
