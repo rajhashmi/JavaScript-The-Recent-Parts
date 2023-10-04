@@ -221,3 +221,14 @@ let y = 20;
         thing
     ] = tmp = data()
 }
+
+// Sample array
+const colors = ['red', 'green', 'blue'];
+
+// Destructuring assignment
+const [firstColor, secondColor, thirdColor] = colors;
+
+// Using the extracted values
+console.log(firstColor);   // red
+console.log(secondColor);  // green
+console.log(thirdColor);   // blue
