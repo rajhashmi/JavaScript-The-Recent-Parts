@@ -77,3 +77,38 @@ console.log(`the lucky number are: ${
     step:4
   })]
 }`)
+
+
+// How can closures be used to create iterators or generators?
+
+
+function closureItetor(){
+    let counter = 0;
+
+    function returnIteror(arr){
+        return {
+            next: function(){
+                if(counter < arr.length){
+                   return ({value : arr[counter++], done : false})
+                }else{
+                    return ({value: undefined, done : true} )
+                }
+            }
+        }
+    }
+    return returnIteror
+};
+
+let array1 = [1,2,3,4,5,6];
+let generatorClosure = closureItetor();
+
+let iterator = generatorClosure(array1);
+
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
