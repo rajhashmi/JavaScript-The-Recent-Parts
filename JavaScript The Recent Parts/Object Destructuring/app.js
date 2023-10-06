@@ -112,3 +112,19 @@
     }
 }
 
+
+let array4 = [1,2,3,4,5];
+let [
+    one1,
+    ,
+    three3,
+    ...rest
+] = array4
+
+let obj4 = { coordinates: null };
+
+let { coordinates: [a, b] = [] } = obj4 && obj4.coordinates ? obj4 : { coordinates: [] };
+console.log('====================================');
+console.log(a, b);
+console.log('====================================');
+
