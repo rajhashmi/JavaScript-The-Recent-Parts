@@ -111,7 +111,7 @@
         // ...
     }
 }
-
+// ========================== more practice ==============
 
 let array4 = [1,2,3,4,5];
 let [
@@ -127,4 +127,20 @@ let { coordinates: [a, b] = [] } = obj4 && obj4.coordinates ? obj4 : { coordinat
 console.log('====================================');
 console.log(a, b);
 console.log('====================================');
+
+
+{
+    function object(){
+        return {a:1,b:2,c:3}
+    }
+    var tmp;
+    var first,second;
+    tmp = {
+        b: second,
+        a:first
+    } = object() || {}
+
+    console.log(second,first);
+
+}
 
